@@ -1,0 +1,164 @@
+{
+  "cells": [
+    "Cell1",
+    "Cell2",
+    "Cell3",
+    "Cell4",
+    "Cell5",
+    "Cell6",
+    "Cell7",
+    "Cell8",
+    "Cell9"
+  ],
+  "protocols": [
+    "A",
+    "B",
+    "C"
+  ],
+  "sigmas_mV": [
+    10
+  ],
+  "n_iter": 100,
+  "master_seed": 20260916,
+  "source": "data/rest_observations/rest_observations.json",
+  "observations_per_run": {
+    "A": 119,
+    "B": 87,
+    "C": 72
+  },
+  "segments_per_run": {
+    "A": 26,
+    "B": 16,
+    "C": 8
+  },
+  "segment_offset_range_Ah": [
+    -4.0,
+    4.0
+  ],
+  "base_config": {
+    "V_error_max_threshold": 0.02,
+    "rmsev_stop_threshold": 0.005,
+    "rmseq_segmentation_stop_threshold": 0.25,
+    "post_merge_offset_gap_threshold": 0.3,
+    "max_iters": 300,
+    "search_range": [
+      -600,
+      600
+    ],
+    "verbose": false,
+    "de_workers": 1,
+    "de_maxiter": 30,
+    "de_popsize": 16,
+    "de_refit_period": 5,
+    "local_maxiter_init": 150,
+    "local_maxiter_iter": 80,
+    "random_seed": 20260916,
+    "min_seg_len": 3,
+    "split_selection_mode": "evaluate_split_or_drop",
+    "min_split_segment_len": null,
+    "drop_point_penalty": null,
+    "force_drop_split_on_no_candidate": true,
+    "segmentation": false,
+    "bounds": [
+      [
+        0.0,
+        0.02
+      ],
+      [
+        0.8,
+        0.99
+      ],
+      [
+        100.0,
+        140.0
+      ],
+      [
+        120.0,
+        180.0
+      ]
+    ],
+    "multistart_workers": 1
+  },
+  "uncertainty_config": {
+    "n_iter": 100,
+    "use_robust_noise_std": false,
+    "segment_generation_mode": "direct_voltage_noise",
+    "segmentation": false,
+    "random_seed": 20260916,
+    "n_jobs": 24,
+    "iterative_kwargs": {
+      "search_range": [
+        -600,
+        600
+      ],
+      "skip_global_init": true,
+      "objective_mode": "combined",
+      "local_bounds_base_frac": 0.2,
+      "multistart_base_frac": 0.2,
+      "objective_rmsev_weight": 200.0,
+      "objective_prior_weight": 0.0,
+      "objective_stop_threshold": 3.0,
+      "local_maxiter_init": 50,
+      "local_maxiter_iter": 50,
+      "max_fit_loops": 2,
+      "multistart_n": 2,
+      "multistart_workers": 1,
+      "fit_patience": 2,
+      "bounds": [
+        [
+          0.0,
+          0.02
+        ],
+        [
+          0.8,
+          0.99
+        ],
+        [
+          100.0,
+          140.0
+        ],
+        [
+          120.0,
+          180.0
+        ]
+      ]
+    },
+    "verbose": false
+  },
+  "bounds_per_cell": [
+    [
+      0.0,
+      0.02
+    ],
+    [
+      0.8,
+      0.99
+    ],
+    [
+      50.0,
+      70.0
+    ],
+    [
+      60.0,
+      90.0
+    ]
+  ],
+  "bounds_solver": [
+    [
+      0.0,
+      0.02
+    ],
+    [
+      0.8,
+      0.99
+    ],
+    [
+      100.0,
+      140.0
+    ],
+    [
+      120.0,
+      180.0
+    ]
+  ]
+}
